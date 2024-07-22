@@ -15,3 +15,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+#heart{
+    color:red;
+    font-size: 1.5rem;
+}
