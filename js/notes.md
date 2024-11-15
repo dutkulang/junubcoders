@@ -127,6 +127,12 @@ console.log(`My name is ${name}, I love JavaScript`);
 
 `let` - variables declared using let are accessible only the code block in which they are defined in. An code block starts from `{` and ends at `}`.
 
+`let` is hoisted but in the temporary dead zone (out side the global object) that means that trying to `let` variable before initializing it will throw a `ReferenceError`.
+
+In other words variables declared with `let` can only be accessed after being initialized.
+
+`let` declared values are stored in the temporary dead time as they wait for initialization. After being initialized the variable is then made accessible from within the global object.
+
 ```js
 function greet(name){
 	console.log(`Greetings ${name} from greet function`)
