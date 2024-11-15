@@ -190,6 +190,125 @@ function sum(x, ...y){
 ---
 rest array is denoted by 3 dots `...` before the argument name, it MUST be the last argument passed to a function 
 
+# map, filter & reduce
+
+`[].map(function)` works by passing every element in the <br>array through function parameter as arguments one  <br> by one and returns a new arraywith the transformed values.
+
+`example 1`
+```js
+// file name: double_array.js
+
+// double every element in the array
+const my_array = [2,3,4,5,6,7];
+
+function double(num){
+    return num * 2;
+} 
+
+const output = my_array.map(double);
+console.log(output);
+```
+```sh
+node double_array.js
+
+[4, 6, 8, 10, 12, 14];
+```
+<hr>
+
+`example 2`
+
+```js
+// file name: square_numbers.js
+
+const numbers = [2, 3, 4, 5, 6, 7, 10, 12];
+const output = numbers.map(num => num * num);
+console.log(output);
+```
+
+```sh
+node square_numbers.js
+[
+   4,  9,  16,  25,
+  36, 49, 100, 144
+]
+```
+
+`example 3`
+
+```js
+// file name: to_binary.js
+// convert all array elements to binary
+
+const numbers = [2, 3, 4, 5, 6, 7, 10, 12];
+const output = numbers.map(num => num.toString(2));
+console.log(output);
+```
+```sh
+node to_binary.js
+[
+  '10',   '11',
+  '100',  '101',
+  '110',  '111',
+  '1010', '1100'
+]
+```
+`example 4`
+
+```js
+// file name: times_ten.js
+// multiple every element by 10
+
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+const output = numbers.map(num => num * 10);
+console.log(output)
+```
+```sh
+node times_ten.js
+
+[
+  10, 20, 30, 40,
+  50, 60, 70
+]
+
+```
+
+```js
+// file name: greetings.js
+// greet every student in the array
+const students = ['Dut', 'Denaya', 'Vuga', 'Timm'];
+console.log(students.map(student => `Hey ${student}`));
+```
+```sh
+node greetings.js
+
+[ 'Hey Dut', 'Hey Denaya', 'Hey Vuga', 'Hey Timm' ]
+```
+## filter
+`[].filter(function)` this is a function that filters out the elements from the array by passing them through a function and returns only elements that passed the filter check (elements that returned true value).
+
+`example 1`
+
+```js
+// file name: isOdd.js
+// array of only odd numbers, filter out even numbers
+
+const my_numbers =  [13, 11, 10, 12, 111, 37,32, 61, 98];
+
+const output = my_numbers.filter(num => num % 2 === 1 );
+console.log(output)
+```
+
+```sh
+node is
+[ 13, 11, 111, 37, 61 ]
+```
+<hr>
+
+`example 2`
+
+
+
+
 # Document Object Model (DOM) Manipulation
  
 The Document Object Model is an API (Application Programming Interface) for manipulating
